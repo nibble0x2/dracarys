@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.20;
+pragma solidity 0.8.20;
 
 import "./BasicFDT.sol";
 import "../../interfaces/tokens/dlp/IMintable.sol";
 import "../../core/AccessControlBase.sol";
-import "solmate/src/utils/ReentrancyGuard.sol";
+import "solmate/utils/ReentrancyGuard.sol";
 
 contract MintableBaseToken is BasicFDT, AccessControlBase, ReentrancyGuard, IMintable {
 	using SafeMath for uint256;
